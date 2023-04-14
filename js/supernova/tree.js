@@ -560,7 +560,7 @@ const TREE_UPGS = {
         },
         rad5: {
             branch: ["rad3"],
-            desc: `All Radiation gains are increased by 10% for every Supernovas you have become.`,
+            desc: `All Radiation gains are increased by 10% for every supernova acquired.`,
             cost: E(1e170),
             effect() {
                 let x = E(1.1).pow(player.supernova.times)
@@ -737,7 +737,7 @@ const TREE_UPGS = {
                 for (let x = 0; x < 6; x++) if (player.supernova.fermions.tiers[0][x].gte(1)) return false
                 return player.supernova.times.gte(81)
             },
-            reqDesc: `Become 81 Supernovas without getting tiers from U-Quark in Quantum run.`,
+            reqDesc: `Reach 81 Supernovas without getting tiers from U-Quark in Quantum run.`,
             desc: `Keep U-Quark Tiers on going Quantum.`,
             cost: E(4),
         },
@@ -755,7 +755,7 @@ const TREE_UPGS = {
         qu_qol4: {
             qf: true,
             branch: ["qu_qol1"],
-            desc: `You can now automatically become a supernova, it no longer resets anything.`,
+            desc: `Supernova no longer resets anything, and becomes automatically done.`,
             cost: E(4),
         },
         qu_qol5: {
@@ -776,7 +776,7 @@ const TREE_UPGS = {
                 for (let x = 0; x < 6; x++) if (player.supernova.fermions.tiers[1][x].gte(1)) return false
                 return player.supernova.times.gte(42)
             },
-            reqDesc: `Become 42 Supernovas without getting tiers from U-Lepton in Quantum run.`,
+            reqDesc: `Reach 42 Supernovas without getting tiers from U-Lepton in Quantum run.`,
             desc: `Keep U-Lepton Tiers on going Quantum.`,
             cost: E(4),
         },
