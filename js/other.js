@@ -93,9 +93,9 @@ const POPUP_GROUPS = {
     },
     supernova10: {
         html: `
-            Congratulations!<br><br>You have becomed 10 Supernovas!<br>
-            And you can manualy supernova!<br><br>
-            <b>Bosons are unlocked in Supernova tab!</b>
+            Congratulations!<br><br>You've acquired 10 Supernovas!<br>
+            You can now manually supernova!<br><br>
+            <b>Bosons are unlocked in the Supernova tab, check it out!</b>
         `,
         width: 400,
         height: 150,
@@ -105,8 +105,8 @@ const POPUP_GROUPS = {
     },
     fermions: {
         html: `
-            Congratulations!<br><br>You have beated Challenge 10!<br><br>
-            <b>Fermions are unlocked in Supernova tab!</b>
+            Congratulations!<br><br>You have beat Challenge 10!<br><br>
+            <b>Fermions are unlocked in the Supernova tab, check it out!</b>
         `,
         width: 400,
         height: 150,
@@ -117,7 +117,7 @@ const POPUP_GROUPS = {
     qu: {
         html() { return `
             Congratulations!<br><br>You have reached ${formatMass(mlt(1e4))} of mass after beating Challenge 12!<br><br>
-            <b>You need to go Quantum!</b>
+            <b>You can now go Quantum!</b>
         `},
         width: 400,
         height: 150,
@@ -128,9 +128,9 @@ const POPUP_GROUPS = {
     qus1: {
         html() { return `
             <img src="images/qu_story1.png"><br><br>
-            Mass has collapsed while going Quantum! It looks like evaporation! But at what cost?
+            Mass has collapsed while going Quantum!
         `},
-        button: "Uhh Oh",
+        button: "Oh no!",
         otherStyle: {
             'font-size': "14px",
         },
@@ -138,9 +138,9 @@ const POPUP_GROUPS = {
     qus2: {
         html() { return `
             <img src="images/qu_story2.png"><br><br>
-            Don’t worry, new mechanics will arrive for you!
+            Don’t worry, new mechanics will arrive for you! Check out the Quantum tab for some Chroma.
         `},
-        button: "Cool",
+        button: "Chroma?",
         otherStyle: {
             'font-size': "14px",
         },
@@ -148,7 +148,7 @@ const POPUP_GROUPS = {
     en: {
         html() { return `
             Congratulations!<br><br>You have reached ${formatMass(mlt(7.5e6))} of mass!<br><br>
-            <b>Entropy is unlocked in Quantum tab!</b>
+            <b>Entropy is unlocked. Check it out in the Quantum tab!</b>
         `},
         width: 400,
         height: 150,
