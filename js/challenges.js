@@ -533,7 +533,7 @@ const CHALS = {
         • Various previous rewards are 'corrupted'.<br>
         • Forces Mass Dilation & Dark Run with 100 in all glyphs (Except Slovak).<br>
         • Primordium particles are disabled.<br>
-        • Pre-Quantum global speed always are stuck at '/100'.<br>
+        • Pre-Quantum global speed is stuck at '/100'.<br>
         • Try to get Corrupted Shards. The Black Hole is key.
         `,
         reward: `ERROR<br><span class="yellow">WHY DO YOU TRY THIS</span>`,
