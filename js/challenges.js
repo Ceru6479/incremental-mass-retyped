@@ -132,11 +132,11 @@ const CHALS = {
         return formatMass
     },
     getReset(x) {
-        if (x < 5) return "Entering this challenge will force dark matter reset."
-        else if (x < 9) return "Entering this challenge will force atom reset."
-        else if (x < 13) return "Entering challenge will supernova reset."
+        if (x < 5) return "Entering this challenge will force a Darkness reset."
+        else if (x < 9) return "Entering this challenge will force an Atomic reset."
+        else if (x < 13) return "Entering challenge will a Supernova reset."
         else if (x < 16) return "Entering challenge will force a Darkness reset."
-        return "Entering challenge will force a FSS reset."
+        return "Entering challenge will force an FSS reset."
     },
     getMax(i) {
         if (i <= 12 && hasPrestige(2,25)) return EINF 
@@ -288,8 +288,8 @@ const CHALS = {
     },
     1: {
         title: "Instant Scale",
-        desc: "Super rank and mass upgrade scaling starts at 25. Also, Super tickspeed starts at 50.",
-        reward: ()=>hasBeyondRank(2,20)?`Supercritical Rank & All Fermions start later, Super Overpower scales weaker by completions.`:`Super Rank starts later, Super Tickspeed scales weaker by completions.`,
+        desc: "Super rank and all mass upgrade scalings start at 25. Super tickspeed starts at 50.",
+        reward: ()=>hasBeyondRank(2,20)?`Supercritical Rank & All Fermions start later, Super Overpower scales weaker by completions.`:`Super Rank starts later & Super Tickspeed scaling is weaker based off completions.`,
         max: E(100),
         inc: E(5),
         pow: E(1.3),
@@ -308,7 +308,7 @@ const CHALS = {
         unl() { return player.chal.comps[1].gte(1) || player.atom.unl },
         title: "Anti-Tickspeed",
         desc: "You cannot buy Tickspeed.",
-        reward: `For every completion adds +7.5% to Tickspeed Power.`,
+        reward: `Every completion adds +7.5% to Tickspeed Power.`,
         max: E(100),
         inc: E(10),
         pow: E(1.3),
@@ -325,8 +325,8 @@ const CHALS = {
     3: {
         unl() { return player.chal.comps[2].gte(1) || player.atom.unl },
         title: "Melted Mass",
-        desc: "Mass gain softcap starts 150 OoMs eariler, and is stronger.",
-        reward: `Mass gain is raised based on completions (doesn't apply in this challenge).`,
+        desc: "Mass gain softcap begins 150 OoM (Orders of Magnitude) earlier, and is much stronger.",
+        reward: `Mass gain is raised based on completions (outside this challenge).`,
         max: E(100),
         inc: E(25),
         pow: E(1.25),
@@ -341,8 +341,8 @@ const CHALS = {
     4: {
         unl() { return player.chal.comps[3].gte(1) || player.atom.unl },
         title: "Weakened Rage",
-        desc: "Rage Power gain is rooted by 10. Additionally, mass gain softcap starts 100 OoMs eariler.",
-        reward: `Rage Powers gain is raised by completions.`,
+        desc: "Rage Power gain is rooted by 10 & Mass gain softcap is 100 OoM (Orders of Magnitude) earlier.",
+        reward: `Rage Power gain is raised by completions.`,
         max: E(100),
         inc: E(30),
         pow: E(1.25),
@@ -358,7 +358,7 @@ const CHALS = {
         unl() { return player.atom.unl },
         title: "No Rank",
         desc: "You cannot rank up.",
-        reward: ()=> hasCharger(3)?`Exotic Rank & Tier, Ultra Prestige Level scale weaker by completions.`:`Rank requirement is weaker by completions.`,
+        reward: ()=> hasCharger(3)?`Exotic Rank & Tier, Ultra Prestige Level scale weaker by completions.`:`Rank requirement is weakened by completions.`,
         max: E(50),
         inc: E(50),
         pow: E(1.25),
@@ -374,7 +374,7 @@ const CHALS = {
     6: {
         unl() { return player.chal.comps[5].gte(1) || player.supernova.times.gte(1) || quUnl() },
         title: "No Tickspeed & Condenser",
-        desc: "You cannot buy Tickspeed & BH Condenser.",
+        desc: "You cannot buy Tickspeeds or BH Condensers.",
         reward: `Every completion adds 10% to tickspeed and BH condenser power.`,
         max: E(50),
         inc: E(64),
@@ -389,8 +389,8 @@ const CHALS = {
     7: {
         unl() { return player.chal.comps[6].gte(1) || player.supernova.times.gte(1) || quUnl() },
         title: "No Rage Powers",
-        desc: "You cannot gain rage powers. Instead, dark matters are gained from mass at a reduced rate. Additionally, mass gain softcap is stronger.",
-        reward: ()=>hasPrestige(2,25)?`Pre-Impossible challenges scale weaker by completions, but this reward doesn't affect C7.`:`Each completion increases challenges 1-4 cap by 2.<br><span class="yellow">On 16th completion, unlock Elements</span>`,
+        desc: "You cannot gain rage power. To compensate, Dark Matter is gained from mass at a reduced rate. Mass gain softcap is stronger.",
+        reward: ()=>hasPrestige(2,25)?`Pre-Impossible challenges scale weaker by completions, but this reward doesn't affect C7.`:`Each completion increases C1-4 cap by 2.<br><span class="yellow">The 16th completion unlock Elements in the Atom tab</span>`,
         max: E(50),
         inc: E(64),
         pow: E(1.25),
@@ -407,7 +407,7 @@ const CHALS = {
         unl() { return player.chal.comps[7].gte(1) || player.supernova.times.gte(1) || quUnl() },
         title: "White Hole",
         desc: "Dark Matter & Mass from Black Hole gains are rooted by 8.",
-        reward: `Dark Matter & Mass from Black Hole gains are raised by completions.<br><span class="yellow">On first completion, unlock 3 rows of Elements</span>`,
+        reward: `Dark Matter & Mass from Black Hole gains are raised by completions.<br><span class="yellow">Completing this unlocks more Elements (if they're unlocked)</span>`,
         max: E(50),
         inc: E(80),
         pow: E(1.3),
@@ -422,8 +422,8 @@ const CHALS = {
     9: {
         unl() { return hasTree("chal4") },
         title: "No Particles",
-        desc: "You cannot assign quarks. Additionally, mass gains exponent is raised to 0.9th power.",
-        reward: `Improve Magnesium-12.`,
+        desc: "You cannot assign quarks. Mass^0.9.",
+        reward: `Exponentially improves Magnesium-12.`,
         max: E(100),
         inc: E('e500'),
         pow: E(2),
@@ -436,13 +436,13 @@ const CHALS = {
     },
     10: {
         unl() { return hasTree("chal5") },
-        title: "The Reality I",
-        desc: "You are trapped in mass dilation and challenges 1-8.",
-        reward: `The exponent of the RP formula is multiplied by completions. (this effect doesn't work while in this challenge)<br><span class="yellow">On first completion, unlock Fermions!</span>`,
+        title: "Reality I",
+        desc: "Challenges 1-through-8 are all applied at once, and forces Mass Dilation.",
+        reward: `Exponentially improves the Relativistic Partile formula (outside this challenge). <br><span class="yellow">Completing this unlocks Fermions!</span>`,
         max: E(100),
         inc: E('e2000'),
         pow: E(2),
-        start: E('e3e4').mul(1.5e56),
+        start: E('e2.8e4').mul(1.5e56),
         effect(x) {
             let ret = x.root(1.75).mul(0.01).add(1)
             return ret
@@ -452,7 +452,7 @@ const CHALS = {
     11: {
         unl() { return hasTree("chal6") },
         title: "Absolutism",
-        desc: "You cannot gain dilated mass, and you are stuck in mass dilation.",
+        desc: "Forces mass dilation, and disables gaining dilated mass.",
         reward: `Star boosters are stronger based on completions.`,
         max: E(100),
         inc: E("ee6"),
@@ -466,9 +466,9 @@ const CHALS = {
     },
     12: {
         unl() { return hasTree("chal7") },
-        title: "Decay of Atom",
-        desc: "You cannot gain Atoms & Quarks.",
-        reward: `Completions add free Radiation Boosters.<br><span class="yellow">On first completion, unlock new prestige layer!</span>`,
+        title: "Atomic Decay",
+        desc: "Disables gaining Atoms & Quarks.",
+        reward: `Adds free Radiation Boosters based on completions.<br><span class="yellow">Completing this unlocks a new prestige layer!</span>`,
         max: E(100),
         inc: E('e2e7'),
         pow: E(2),
@@ -481,9 +481,9 @@ const CHALS = {
     },
     13: {
         unl() { return hasElement(132) },
-        title: "Absolutely Black Mass",
-        desc: "Normal mass and mass of black hole gains are set to lg(x)^^1.5.",
-        reward: `Increase dark ray earned based on completions.<br><span class="yellow">On first completion, unlock more features!</span>`,
+        title: "Vantablack Mass",
+        desc: "Normal & black-hole mass are set to lg(x)^^1.5.",
+        reward: `Increase dark ray yields based on completions.<br><span class="yellow">Completing this unlocks new thingsn!</span>`,
         max: E(25),
         inc: E('e2e4'),
         pow: E(8),
@@ -497,8 +497,8 @@ const CHALS = {
     14: {
         unl() { return hasElement(144) },
         title: "No Dmitri Mendeleev",
-        desc: "You cannot purchase any pre-118 elements. Additionally, you are trapped in quantum challenge with modifiers [5,5,5,5,5,5,5,5].",
-        reward: `Gain more primordium theorems.<br><span class="yellow">On first completion, unlock more features!</span>`,
+        desc: "Disables all pre-118 elements. Forces a [5,5,5,5,5,5,5,5] Quantum Challenge.",
+        reward: `Gain more primordium theorems based off completions.<br><span class="yellow">Completing this unlocks new things!</span>`,
         max: E(100),
         inc: E('e2e19'),
         pow: E(3),
@@ -511,9 +511,9 @@ const CHALS = {
     },
     15: {
         unl() { return hasElement(168) },
-        title: "The Reality II",
-        desc: "You are trapped in c1-12 and quantum challenge with modifiers [10,5,10,10,10,10,10,10].",
-        reward: `Normal mass's overflow starts later by completions.<br><span class="yellow">On first completion, unlock more features!</span>`,
+        title: "Reality II",
+        desc: "Challenges 1-through-12 are all applied at once, plus a [10,5,10,10,10,10,10,10] Quantum Challenge.",
+        reward: `Mass Overflow starts later based off completions.<br><span class="yellow">Completing this unlocks new things!</span>`,
         max: E(100),
         inc: E('e1e6'),
         pow: E(2),
@@ -528,14 +528,15 @@ const CHALS = {
         unl() { return hasElement(218) },
         title: "Chaotic Matter Annihilation",
         desc: `
-        • You cannot gain Rage Power nor dark matters, and all matters’ formula is disabled, and they generate each other. Red matter generates dark matter.<br>
-        • Pre-C16 following contents (including rank & prestige tiers, main upgrades, elements, tree and etc.) are corrupted like disabled.<br>
-        • You are trapped in Mass Dilation & Dark Run with 100 all glyphs (10 slovak glyphs).<br>
-        • Primordium particles disabled.<br>
-        • Pre-Quantum global speed always sets to /100.<br>
-        You can earn Corrupted Shard based on your mass of black hole, when exiting the challenge.
+        • Disables obtaining any Rage Power and Dark Matter.<br>
+	• Matter formula is disabled. Red matter generates dark matter.<br>
+        • Various previous rewards are 'corrupted'.<br>
+        • Forces Mass Dilation & Dark Run with 100 in all glyphs (Except Slovak).<br>
+        • Primordium particles are disabled.<br>
+        • Pre-Quantum global speed always are stuck at '/100'.<br>
+        • Try to get Corrupted Shards. The Black Hole is key.
         `,
-        reward: `Improve Hybridized Uran-Astatine. [NOT IMPLEMENTED]<br><span class="yellow">On first completion, unlock ???</span>`,
+        reward: `ERROR<br><span class="yellow">WHY DO YOU TRY THIS</span>`,
         max: E(1),
         inc: E('e1.25e11'),
         pow: E(2),
