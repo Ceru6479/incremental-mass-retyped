@@ -20,51 +20,51 @@ const QCs = {
             eff(i) {
                 return [1-0.03*i,2/(i+2)]
             },
-            effDesc(x) { return `<b>^${format(x[0])}</b> to exponent from all star resources.<br><b>^${format(x[1])}</b> to strength of star generators.` },
+            effDesc(x) { return `Changes exponent of all star resources to <b>^${format(x[0])}</b>.<br> Star generators' exponent is <b>^${format(x[1])}</b>.` },
         },{
             eff(i) {
                 let x = E(2).pow(i**2)
                 return x
             },
-            effDesc(x) { return `<b>/${format(x,0)}</b> to pre-Quantum global speed.` },
+            effDesc(x) { return `Slows Pre-Quantum Global Speed/PQGS. <br>Speed<b>/${format(x,0)}</b>.` },
         },{
             eff(i) {
                 let x = i**1.5*0.15+1
                 return x
             },
-            effDesc(x) { return `<b>x${format(x)}</b> to requirements of any Fermions.` },
+            effDesc(x) { return `Fermion scaling increases. <br><b>x${format(x)}</b>.` },
         },{
             eff(i) {
                 let x = 0.9**(i**1.25)
                 return x
             },
-            effDesc(x) { return `<b>^${format(x)}</b> to multiplier from Bosonic & Radiation resources.` },
+            effDesc(x) { return `Bosonic & Radiation resources are rooted. <br><b>^${format(x)}</b>.` },
         },{
             eff(i) {
                 let x = 0.8**(i**1.25)
                 return x
             },
-            effDesc(x) { return `<b>^${format(x)}</b> to multiplier from pre-Supernova resources, except all star resources.` },
+            effDesc(x) { return `Pre-Supernova resources are rooted. <br><b>^${format(x)}</b> (excluding star resources).` },
         },{
             eff(i) {
                 let x = 1.2**i
                 return x
             },
-            effDesc(x) { return `<b>x${format(x)}</b> to requirements of any pre-Quantum Challenges.` },
+            effDesc(x) { return `Scales pre-Quantum challenges much more. <br><b>x${format(x)}</b>` },
         },{
             eff(i) {
                 if (hasElement(163)) i /= 2
                 let x = i**1.5/2+1
                 return x
             },
-            effDesc(x) { return `<b>^${format(x)}</b> to Mass Dilation’s penalty.` },
+            effDesc(x) { return `Mass Dilation's penalty is greatly harshened. <br><b>^${format(x)}</b>` },
         },{
             eff(i) {
                 if (hasElement(98) && player.qu.rip.active) i *= 0.8
                 let x = [1-0.05*i,i/10+1]
                 return x
             },
-            effDesc(x) { return `<b>^${format(x[0])}</b> to starting of pre-Quantum scaling.<br><b>${format(x[1]*100)}%</b> to strength of pre-Quantum scaling.` },
+            effDesc(x) { return `Pre-Quantum scaling starts <b>^${format(x[0])}</b> earlier.<br> Pre-Quantum scaling is <b>${format(x[1]*100)}%</b> harsher.` },
         },
     ],
 }
