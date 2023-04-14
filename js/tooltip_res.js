@@ -130,11 +130,11 @@ const TOOLTIP_RES = {
         full: "Death Shard",
         desc() {
             let h = `<i>
-            Big Rip the Dimension, then go back.
+            Big Rip the Dimension.
             <br><br>
-            When Big Rip the Dimension, Entropy Rewards don’t work, all Primordium effects are 50% weaker except Epsilon Particles that don’t work, tree [qu2, qu10] doesn’t work, and you are trapped in Quantum Challenge with modifiers [10,2,10,10,5,0,2,10].
-            Death Shards are gained based on your normal mass while Big Ripped.
-            Unlock various upgrades from Big Rip.
+            When performing a Big Rip, Entropy Rewards are disabled, all Primordium effects are 50% weaker, Epsilon Particles are disabled, [qu2, qu10] are disabled, and forces a [10,2,10,10,5,0,2,10] Quantum Challenge.
+            Death Shards are generated off mass while in the Big Rip.
+            They can be used to unlock various upgrades.
             </i>`
 
             return h
@@ -162,7 +162,7 @@ const TOOLTIP_RES = {
         full: "Pre-Quantum Global Speed",
         desc() {
             let h = `<i>
-            Speeds pre-Quantum resources' production. (after exponent & dilation, etc.)
+            Speeds up pre-Quantum resources' production. (after exponent & dilation, etc.)
             </i>`
 
             return h
@@ -188,12 +188,12 @@ const TOOLTIP_RES = {
             Your best mass of black hole in 16th Challenge is <b>${formatMass(player.dark.c16.bestBH)}</b>.
             <br class='line'>
             <i>
-            Start the 16th Challenge. Earn <b>Corrupted Shard</b> based on your mass of black hole, when exiting that challenge and reaching <b>${formatMass('e100')}</b> of black hole.<br><br>
-            • You cannot gain Rage Power nor dark matters, and all matters’ formula is disabled, and they generate each other. Red matter generates dark matter.<br>
-            • Pre-C16 following contents (including rank & prestige tiers, main upgrades, elements, tree and etc.) are corrupted like disabled.<br>
-            • You are trapped in Mass Dilation & Dark Run with 100 all glyphs (10 slovak glyphs).<br>
-            • Primordium particles disabled.<br>
-            • Pre-Quantum global speed always sets to /100.<br>
+            Start the 16th Challenge from here. Earn <b>Corrupted Shard</b> based on your mass of black hole, when exiting and reaching <b>${formatMass('e100')}</b> of black hole.<br><br>
+            • Disables obtaining any Rage Power and Dark Matter.<br>
+            • Various previous rewards are 'corrupted'.<br>
+            • Forces Mass Dilation & Dark Run with 100 in all glyphs (Except Slovak).<br>
+            • Primordium particles are disabled.<br>
+            • Pre-Quantum global speed is stuck at '/100'.<br>
             </i>`
 
             return h
@@ -203,10 +203,10 @@ const TOOLTIP_RES = {
         full: "???",
         desc() {
             let h = `
-            What am i supposed to do now?...
+            Here be dragons!
             <br class='line'>
             <i>
-            Reach <b>???</b> of mass to ???.
+            Reach <b>???</b> of ERR to ???.
             </i>
             `
 
