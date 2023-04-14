@@ -834,7 +834,7 @@ const UPGS = {
                 cost: E(750000),
             },
             9: {
-                desc: `Unlock Break Dilation.`,
+                desc: `Unlock Break Dilation & Prestiges.`,
                 cost: E(1e7),
             },
             10: {
