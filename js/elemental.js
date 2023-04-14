@@ -76,7 +76,7 @@ const ELEMENTS = {
             effDesc(x) { return hasPrestige(0,867) ? '^'+format(x) : format(x)+"x"+softcapHTML(x,'ee4') },
         },
         {
-            desc: `Stronger's power is stronger based on Proton Powers.`,
+            desc: `Stronger's power increases based on Proton Powers.`,
             cost: E(2.5e16),
             effect() {
                 let x = player.atom?player.atom.powers[0].max(1).log10().pow(0.8).div(50).add(1):E(1)
@@ -102,7 +102,7 @@ const ELEMENTS = {
             effDesc(x) { return format(x)+"x" },
         },
         {
-            desc: `Carbon's effect is now multiplied by the number of elements bought.`,
+            desc: `Carbon's effect gets multiplied by the number of elements bought.`,
             cost: E(1e20),
             effect() {
                 let x = E(player.atom.elements.length+1)
@@ -132,7 +132,7 @@ const ELEMENTS = {
             cost: E(1e29),
         },
         {
-            desc: `For every c7 completion, increase c5 and c6 cap by 2.`,
+            desc: `For every C7 completion, increase C5 and C6 cap by 2.`,
             cost: E(2.5e30),
             effect() {
                 let x = player.chal.comps[7].mul(2)
@@ -197,7 +197,7 @@ const ELEMENTS = {
             cost: E(1e65),
         },
         {
-            desc: `Passively gain 100% of the atoms you would get from resetting each second. Atomic Power boost Relativistic particles gain at a reduced rate.`,
+            desc: `Silicon's 5% passive-gain becomes 100%, Atomic Power boost Relativistic particles gain at a reduced rate.`,
             cost: E(1e75),
             effect() {
                 let x = hasPrestige(0,40) ? player.atom.atomic.max(1).log10().add(1).log10().add(1).root(2) : player.atom.atomic.max(1).log10().add(1).pow(0.4)
@@ -323,7 +323,7 @@ const ELEMENTS = {
             effDesc(x) { return format(x)+"x" },
         },
         {
-            desc: `You automatically buy mass dilation upgrades if you purchased them first. They no longer spend dilated mass.`,
+            desc: `Automatically buys mass dilation upgrades if already purchased. They stop spending dilated mass.`,
             cost: E('e360'),
         },
         {
@@ -349,7 +349,7 @@ const ELEMENTS = {
             effDesc(x) { return format(x)+"x" },
         },
         {
-            desc: `Quarks gain is raised to the 1.05th power.`,
+            desc: `Quark gain is ^1.05 stronger.`,
             cost: E('e610'),
         },
         {
@@ -370,7 +370,7 @@ const ELEMENTS = {
             cost: E('e1750'),
         },
         {
-            desc: `Mass gain softcap^2 is 10% weaker.`,
+            desc: `Mass softcap^2 is 10% weaker.`,
             cost: E('e2400'),
         },
         {
@@ -456,11 +456,11 @@ const ELEMENTS = {
             cost: E('e8e5'),
         },
         {
-            desc: `Lanthanum's effect is twice stronger.`,
+            desc: `Lanthanum's effect is doubled.`,
             cost: E('e1.1e6'),
         },
         {
-            desc: `Collapsed star boosts quarks gain.`,
+            desc: `Collapsed star boosts quark gain.`,
             cost: E('e1.7e6'),
             effect() {
                 let x = player.stars.points.add(1)
@@ -561,11 +561,11 @@ const ELEMENTS = {
             cost: E('e2e16'),
         },
         {
-            desc: `Carbon-6’s effect is overpowered, but disable Sodium-11.`,
+            desc: `Carbon-6’s effect becomes exponential, but disables Sodium-11.`,
             cost: E('e150'),
         },
         {
-            desc: `All tickspeed scalings starts 100x later (after nerf from 8th QC modifier).`,
+            desc: `All tickspeed scalings starts 100x later (after QC's Extreme Scaling).`,
             cost: E('e500'),
         },
         {
@@ -579,7 +579,7 @@ const ELEMENTS = {
             effDesc(x) { return "^"+x.format() },
         },
         {
-            desc: `Death Shard gain is boosted by Dilated Mass.`,
+            desc: `Death Shard gain gets boosted by Dilated Mass.`,
             cost: E('e1300'),
             effect() {
                 let x = player.md.mass.add(1).log10().add(1).pow(0.5)
@@ -605,7 +605,7 @@ const ELEMENTS = {
             effDesc(x) { return "x"+x.format() },
         },
         {
-            desc: `Death Shard gain is increased by 10% for every supernova.`,
+            desc: `Death Shard gain is increased by 10% for every supernova (Big Rip only).`,
             cost: E("e32000"),
             effect() {
                 let s = player.supernova.times
@@ -628,7 +628,7 @@ const ELEMENTS = {
             cost: E('e8.5e6'),
         },
         {
-            desc: `8th QC modifier in Big Rip is 20% weaker.`,
+            desc: `Extreme Scaling modifier in Big Rip is 20% weaker.`,
             cost: E('e1.2e7'),
         },
         {
@@ -654,7 +654,7 @@ const ELEMENTS = {
             cost: E('e111111111'),
         },
         {
-            desc: `Pre-Quantum Global Speed is more effective based on Honor.`,
+            desc: `Pre-Quantum Global Speed increases based on Honor.`,
             cost: E('e5e8'),
             effect() {
                 let b = E(2)
@@ -665,7 +665,7 @@ const ELEMENTS = {
             effDesc(x) { return format(x)+"x" },
         },
         {
-            desc: `Add 200 more C9-12 maximum completions.`,
+            desc: `Increase C9-12 completion cap by 200.`,
             cost: E('e1.2e9'),
         },
         {
@@ -685,11 +685,11 @@ const ELEMENTS = {
             cost: E('e1.6e10'),
         },
         {
-            desc: `Entropic multiplier is effective in big rip.`,
+            desc: `Entropic multiplier works in big rip.`,
             cost: E('e3e10'),
         },
         {
-            desc: `Mass gain softcap^4 is 50% weaker (only 20% in Big Rip).`,
+            desc: `Mass gain softcap^4 is 50% weaker (20% in Big Rip).`,
             cost: E('e6e10'),
         },
         {
@@ -731,7 +731,7 @@ const ELEMENTS = {
             cost: E("e5e16"),
         },
         {
-            desc: `Unlock <span id="final_118">Darkness</span>, you'll able to go Dark.`,
+            desc: `Unlock <span id="final_118">Darkness</span>.`,
             cost: E("e1.7e17"),
         },
         {
@@ -750,22 +750,22 @@ const ELEMENTS = {
             cost: E("5000"),
         },{
             dark: true,
-            desc: `You can buy Cerium-58 in big rip.`,
+            desc: `Unlocks Cerium-58 in Big Rip.`,
             cost: E("25000"),
         },{
             dark: true,
-            desc: `You can now automatically complete Challenges 9-11. Keep Challenge 12 completions on Big Rip or start QC.`,
+            desc: `You can now automatically complete Challenges 9-11. Challenge 12 completions are kept on Big Rip and QC.`,
             cost: E("1e6"),
         },{
             br: true,
-            desc: `You can now automatically buy break dilation upgrades. They no longer spent relativistic mass.`,
+            desc: `Automatically buys break dilation upgrades. They don't take relativistic mass.`,
             cost: E("ee19"),
         },{
             dark: true,
-            desc: `Keep quantum tree on darkness.`,
+            desc: `Keep all of the quantum tree on darkness.`,
             cost: E("1e7"),
         },{
-            desc: `7th challenge’s effect gives more C9-12 completions at 10% rate.`,
+            desc: `C7's reward gives more C9-12 completions at a reduced rate.`,
             cost: E("e9e24"),
             effect() {
                 if (hasPrestige(2,25)) return E(0)
@@ -776,15 +776,15 @@ const ELEMENTS = {
             effDesc(x) { return "+"+format(x,0) },
         },{
             dark: true,
-            desc: `You can buy Tungsten-74 in Big Rip.`,
+            desc: `Unlocks Tungsten-74 in Big Rip.`,
             cost: E("1e8"),
         },{
             dark: true,
-            desc: `Start with break dilation unlocked. Relativistic energy gain is increased by 10%.`,
+            desc: `Start Darkness with break dilation unlocked. Relativistic energy gain is increased by 10%.`,
             cost: E("1e9"),
         },{
             dark: true,
-            desc: `You can buy atom upgrades 13-15 outside Big Rip.`,
+            desc: `Unlocks atom upgrades 13-15 outside Big Rip.`,
             cost: E("1e11"),
         },{
             br: true,
